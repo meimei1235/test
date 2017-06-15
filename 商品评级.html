@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	#div1 {
+		margin: 30px;
+		width: 500px;
+		border: 1px solid #000;
+		}
+		#div2, #div3 {
+			background-color: #A6E6F9;
+			width: 500PX;
+			margin: 0px;
+			padding: 0px;
+		}
+		#img1, #img2, #img3, #img4, #img5 {
+			width: 20px;
+			height: 20px;
+			cursor: pointer;
+		}
+		table {
+			margin: 0px;
+
+		}
+		textarea {
+			
+			color: #B2B1B1;
+		}
+
+	</style>
+</head>
+<body>
+	<div width="500px" id="div1">
+		<div id="div2" >
+			商品评价等级：&nbsp;&nbsp;&nbsp;&nbsp;
+			<img src="前端素材/flower1.jpg" alt="" id="img1" onmouseover="setScore(1)" onclick="commitScore(1)" onmouseout="resetScore()"/>
+			<img src="前端素材/flower1.jpg" alt="" id="img2" onmouseover="setScore(2)" onclick="commitScore(2)" onmouseout="resetScore()"/>
+			<img src="前端素材/flower1.jpg" alt="" id="img3" onmouseover="setScore(3)" onclick="commitScore(3)" onmouseout="resetScore()"/>
+			<img src="前端素材/flower0.jpg" alt="" id="img4" onmouseover="setScore(4)" onclick="commitScore(4)" onmouseout="resetScore()"/>
+			<img src="前端素材/flower0.jpg" alt="" id="img5" onmouseover="setScore(5)" onclick="commitScore(5)" onmouseout="resetScore()"/>
+		</div>
+		
+		<table  cellspacing="0" cellpadding="0" bgcolor="#ffffff" >
+			<tr>
+				<td><img src="前端素材/goods.jpg" alt="" height="150px" /></td>
+				<td><textarea name="" id="" cols="40" rows="8" >亲，写点什么吧，你的意见对其他买家是很有帮助的。</textarea></td>
+			</tr>
+		</table>
+		<div id="div3"><button>提交评价</button></div>
+		</div>
+		<script>
+			var score = 3;
+			var flag = false;
+			function setScore(score ) {
+				if (flag == true)  return;
+				for (var i = 1; i <= 5; i++) {
+					var img = document.getElementById("img"+String(i));
+					img.src = (i <= score)? "前端素材/flower0.jpg": "前端素材/flower1.jpg";
+				}
+			}
+			function commitScore(s) {
+				score = s;
+				flag = true;
+
+			}
+			function resetScore() {
+				setScore(score);
+			}
+		</script>
+</body>
+</html>
