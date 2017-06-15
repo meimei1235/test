@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="konva/konva.js"></script>
+	<script src="js/ProgressBar.js"></script>
+</head>
+<body>
+	<div id="container">
+	  <canvas id="cavs" width="600px" height="600px">
+	  	
+	  </canvas>
+	</div>
+	<script>
+		//创建舞台
+	  var stage = new Konva.Stage({
+	  	container: "container",
+	  	width: window.innerWidth,
+	  	height: window.innerHeight
+	  });
+	  //创建层
+	  var layer = new Konva.Layer();
+	  //把层添加到舞台上
+	  stage.add(layer);
+	  //设置中心点坐标
+	  var x0 = 1/2 * stage.width();
+	  var y0 = 1/2 * stage.height ();
+	  var option = {
+	  	x: 1/8 * stage.width(),
+	  	y: 1/2 * stage.height(),
+	  	w: 5/8 * stage.width(),
+	  	h: 1/12 * stage.height(),
+	  	fillStyle: "yellow",
+	  	//strokeStyle: "black"
+	  };
+	  var p = new ProgressBar(option);
+	  p.addToLayer(layer);
+	  layer.draw();
+	  p.changeValue(.8);
+	</script>
+</body>
+</html>

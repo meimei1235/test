@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			background-color: #f0f0f0;
+			overflow: hidden;
+		}
+	</style>
+	<script src="konva/konva.js"></script>
+	<script src="js/CircleText.js"></script>
+</head>
+<body>
+	<div id="container">
+	  <canvas id="cavs" width="600px" height="600px">
+	  	
+	  </canvas>
+	</div>
+	<script>
+		var stage = new Konva.Stage({
+			container: "container",
+			width: window.innerWidth,
+			height: window.innerHeight
+		});
+		var x0 = 1/2 * stage.width();
+		var y0 = 1/2 * stage.height();
+		var bglayer = new Konva.Layer();
+		stage.add(bglayer);
+		var innerRadius = 252 / 2;
+		var outerRadius = 220;
+		var innerCircle = new Konva.Circle({
+			x: x0,
+			y: y0,
+			radius: innerRadius,
+			stroke: "#ccc",
+			dash: [10,4]
+		});
+		var outerCircle = new Konva.Circle({
+			x: x0,
+			y: y0,
+			radius: outerRadius,
+			stroke: "#ccc",
+			dash: [10,4]
+		});
+		bglayer.add(innerCircle);
+		bglayer.add(outerCircle);
+		var circleText = new CircleText({
+			x: x0,
+			y: y0,
+			innerRadius: 132 / 2,
+			outerRadius: 90,
+			innerStyle: "#525A82",
+			outerStyle: "#E1E1E1",
+			text: "web全栈"
+		});
+		//bglayer.add(circleText);
+		circleText.addToLayer(bglayer);
+		bglayer.draw();
+		var x00 = x0 + innerRadius * Math.cos(-60 * Math.PI / 180);
+		var y00 = y0 + innerRadius * Math.sin(-60 * Math.PI / 180);
+		var animateLayer = new Konva.Layer();
+		stage.add(animateLayer);
+		var group2 = new Konva.Group({
+			x: x0,
+			y: y0
+		});
+		var circleText2_css = new CircleText({
+			x: innerRadius * Math.cos(160 * Math.PI / 180),
+			y: innerRadius * Math.sin(160 * Math.PI / 180),
+			innerRadius: 30,
+			outerRadius: 40,
+			innerStyle: "#FACED6",
+			outerStyle: "#E1E1E1",
+			text: "CSS3"
+
+		});
+		circleText2_css.addToLayer(group2);
+		var circleText2_html = new CircleText({
+			x: innerRadius * Math.cos(-60 * Math.PI / 180),
+			y: innerRadius * Math.sin(-60 * Math.PI / 180),
+			innerRadius: 30,
+			outerRadius: 40,
+			innerStyle: "orange",
+			outerStyle: "#E1E1E1",
+			text: "HTML5"
+		});
+		circleText2_html.addToLayer(group2);
+		animateLayer.add(group2);
+		var group3 = new Konva.Group({
+			x: x0,
+			y: y0
+		});
+		var circleText3_js = new CircleText({
+			x: outerRadius * Math.cos(60 * Math.PI / 180),
+			y: outerRadius * Math.sin(60 * Math.PI / 180),
+			innerRadius: 40,
+			outerRadius: 50,
+			innerStyle: "#91BFF8",
+			outerStyle: "#E1E1E1",
+			text: "JS"
+		});
+		circleText3_js.addToLayer(group3);
+		animateLayer.add(group3);
+		animateLayer.draw();
+		var rotateAnglePerSecond = 60; // 设置美妙旋转角度
+		var animate = new Konva.Animation(function(frame){
+			var rotateAngle = rotateAnglePerSecond * frame.timeDiff / 1000;
+			group2.rotate(rotateAngle);
+			group2.getChildren().each(function(item, index){
+				item.rotate(-rotateAngle);
+			});
+			group3.rotate(-rotateAngle);
+			group3.getChildren().each(function(item, index){
+				item.rotate(rotateAngle);
+			});
+		}, animateLayer);
+		animate.start();
+		animateLayer.on("mouseover", function(event) {
+			/* Act on the event */
+			rotateAnglePerSecond = 10;
+		});
+		animateLayer.on("mouseout", function(event) {
+			/* Act on the event */
+			rotateAnglePerSecond = 60;
+		});
+	</script>
+</body>
+</html>

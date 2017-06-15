@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/精灵.js"></script>
+</head>
+<body>
+  <div id="container">
+  	<canvas id="cavs" width="600px" height="600px" style="border: 1px solid black;">
+  	  你的浏览器不支持canvas，请升级浏览器
+  	</canvas>
+  	<button id="btn-left">向左</button>
+  	<button id="btn-right">向右</button>
+  	<button id="btn-up">向上</button>
+  	<button id="btn-down">向下</button>
+  </div>
+  <script>
+  	(function(){
+  		var canvas = document.getElementById("cavs");
+  		var ctx = canvas.getContext("2d");
+  		var s = new Sprite({
+  			x: 300,
+  			y: 300,
+  			w: 80,
+  			h: 65*2,
+  			fps: 4,
+  			origwidth: 40,
+  			origheight: 65,
+  			imgSrc: "images/DMMban.png"
+  		});
+  		s.render(ctx);
+  		var btnlft = document.getElementById("btn-left");
+  		btnlft.onclick = function(){
+  			s.changeDir("left");
+  		};
+  		var btnrt = document.getElementById("btn-right");
+  		btnrt.onclick = function(){
+  			s.changeDir("right");
+  		};
+  		var btnup = document.getElementById("btn-up");
+  		btnup.onclick = function(){
+  			s.changeDir("up");
+  		};
+  		var btndn = document.getElementById("btn-down");
+  		btndn.onclick = function(){
+  			s.changeDir("down");
+  		};
+
+  	})();
+  </script>
+</body>
+</html>

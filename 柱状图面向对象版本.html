@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			background-color: #f0f0f0;
+			overflow: hidden;
+		}
+	</style>
+	<script src="konva/konva.js"></script>
+	<script src="js/Myhistogram.js"></script>
+</head>
+<body>
+	<div id="container">
+	  <canvas id="cavs" width="600px" height="600px">
+	  	
+	  </canvas>
+	</div>
+	<script>
+		var stage = new Konva.Stage({
+			container: "container",
+			width: window.innerWidth,
+			height: window.innerHeight,
+		});
+		var layer = new Konva.Layer();
+		stage.add(layer);
+		var data = [
+			{ name: '前端', value: '.8', color: 'green'},
+			{ name: 'PHP', value: '.3', color: 'blue'},
+			{ name: 'Java', value: '.7', color: 'red'},
+			{ name: 'UI', value: '.9', color: 'orange'},
+			{ name: 'IOS', value: '.4', color: 'purple'},
+			{ name: 'Android', value: '.9', color: 'pink'}
+		];
+		var h = new Myhistogram({
+			x: 1/8 * stage.width(),
+			y: 3/4 * stage.height(),
+			w: 3/4 * stage.width(),
+			h: 1/2 * stage.height(),
+			data: data
+		});
+		//layer.add(h);
+		h.addToLayer(layer);
+		layer.draw();
+		stage.on("contentClick", function(){
+			h.animate_play();
+		});
+	</script>
+</body>
+</html>

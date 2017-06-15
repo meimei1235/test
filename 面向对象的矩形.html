@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/myRect.js"></script>
+	<script src="js/MyCircle.js"></script>
+</head>
+<body>
+	<div>
+	  <canvas id="cavs1">
+	  	您的浏览器版本不支持，请升级浏览器！
+	  </canvas>
+	  <canvas id="cavs2">
+	  	您的浏览器版本不支持，请升级浏览器！
+	  </canvas>
+	</div>
+	<script>
+		(function(){
+			var canvas1 = document.getElementById("cavs1");
+			var canvas2 = document.getElementById("cavs2");
+			var ctx1 = canvas1.getContext("2d");
+			var ctx2 = canvas2.getContext("2d");
+			canvas1.width = 600;
+			canvas1.height = 600;
+			canvas1.style.border="1px solid black";
+			canvas2.width = 600;
+			canvas2.height = 600;
+			canvas2.style.border="1px solid black";
+			/*var rect = new MyRect({ //定义一个矩形对象
+				x: 100,
+				y: 100,
+				w: 100,
+				h:100,
+				angle: 30,	   //旋转角度
+				scaleX: 1.5,		   //放大缩小的倍数
+				scaleY: 1.5,
+				fillStyle: "#96C1D8",	//填充的样式
+				strokeStyle: null
+
+			});*/
+			var arc = new MyCircle({ //定义一个圆形对象
+				x: 200,
+				y: 200,
+				angle: 60,
+				fillStyle: "orange",
+				strokeStyle: "black",
+				scaleX: 1.5,
+				scaleY: 1.5,
+				opacity: .5,
+				counterclockwise: true,
+				startAngle: 30 ,
+				endAngle: 90,
+				r: 120
+			});
+			//rect.render(ctx1);
+			arc.render(ctx1);
+			ctx2.drawImage(canvas1, 0, 0);
+			/*setInterval(function(){
+				ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
+				arc.x += 10;
+				ARC.render(ctx1);
+				ctx2.drawImage(canvas1, 0, 0);
+			}, 100);*/
+		})();
+	</script>
+</body>
+</html>
