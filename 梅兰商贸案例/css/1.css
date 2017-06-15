@@ -1,0 +1,159 @@
+      body {
+		min-width: 1100px;
+	  }
+	  h4 {
+	  	background-color: #ECF1F7;
+	  	padding: 5px 10px;
+	  	font-weight: bold;
+
+	  }
+	  .nav {
+		padding: 0;
+		background-color: #fff;
+	  }
+	  .nav .nav-title {
+	  	background-color: #f7f7f7;
+        padding: 5px 98px;
+	  }
+	  .nav .nav-title ul li {
+	  	margin: 0 5px;
+	  }
+	  #content-header ul li {
+	  	padding: 10px 25px;
+	  }
+	  #content-header ul li span {
+	    margin-right: 10px;
+	  }
+	  #myCarousel {
+	  	height: 288px;
+        width: 670px;
+        border: 1px solid #ddd;
+        margin: 0 15px;
+        background: black;
+	  }
+	  #myCarousel .carousel-indicators {
+	  	right: 234px;
+        margin-left: 0px;
+        width: 200px;
+        left: 234px;
+	  }
+	  #myCarousel .carousel-inner {
+	  	margin: 15px 100px;
+	  	width: 468px;
+        height: 195px;
+	  }
+	  #myCarousel .carousel-control {
+	    top: 100px;
+        bottom: 70px;
+        height: 46px;
+	  }
+	  #content-header .pull-right {
+	  	padding-left: 5px;
+		padding-right: 5px;
+		height: 254px;
+		width: 242px;
+		border: 1px solid #ddd;
+		top: 15px;
+	  }
+	  #Building-Materials .content-box {
+	  	width: 850px;
+        border: 1px solid #ddd;
+        padding: 10px 0;
+	  }
+	   #Building-Materials .content {
+	   	width: 45%;
+	   	margin: 10px 0;
+
+	   }
+	   #Building-Materials .pull-right {
+	   	border: 1px solid #ddd;
+        height: 276px;
+        line-height: 1.8;
+	   }
+	   #child-safe {
+	     height: 356px;
+	   }
+	   #child-safe .content-box {
+	   	 border: 1px solid #ddd;
+		 padding: 0px 0;
+		 height: 320px;
+		 width: 850px;
+	   }
+	   #child-safe .child-safe {
+	   	width: 210px;
+	   	margin-top: 5px;
+
+	   }
+	   #child-safe .child-safe p {
+	   	width: 168px;
+	   	margin: 5px 25px;
+	   }
+	   #child-safe .child-safe span {
+	   	display: block;
+	   	margin: 5px 0;
+	   }
+	   #child-safe .pull-right {
+	   	width: 285px;
+        border: 1px solid #ddd;
+        height: 320px;
+	   }
+	   #art .content-box {
+	   	border: 1px solid #ddd;
+        padding: 0;
+        width: 850px;
+        height: 326px;
+	   }
+	   #art .content-box .art-item {
+	   	width: 50%;
+	   	margin: 20px 0;
+	   }
+	   #art .content-box .art-item .pull-left {
+	   	margin-right: 5px;
+	   }
+	   #art .content-box .art-item .pull-left button {
+	   	margin-top: 10px;
+        margin-left: 5px;
+	   }
+	   #art .content-box .art-item p {
+	   	 line-height: 1.6;
+	   }
+	   #art .content-box .art-item p strong {
+	   	 display: block;
+         margin-top: 10px;
+         border-bottom-width: 5px;
+         margin-bottom: 10px;
+	   }
+	   #art .pull-right {
+	   	 width: 285px;
+         border: 1px solid #ddd;
+	   }
+	   #art .pull-right h5 {
+		padding-left: 10px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 8px;
+	   }
+	   #art .pull-right .pull-right-pic {
+	   	padding-left: 5px;
+        padding-right: 5px;
+	   }
+	   #art .pull-right .pull-right-pic img {
+	   	float: left;
+        margin: 0 5px;
+	   }
+	   #art .pull-right .pull-right-pic p {
+	   	 padding: 10px;
+         margin-left: 0;
+         margin-top: 10px;
+	   }
+	   #art .pull-right ul {
+	   	line-height: 1.8;
+        padding-right: 40px;
+        padding-left: 50px;
+	   }
+	   #footer .content-box {
+	   	border-top: 1px solid #ddd;
+        border-bottom: 2px solid blue;
+        margin: 10px 0;
+        padding: 30px 50px;
+        text-align: center;
+	   }

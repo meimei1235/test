@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css">
+	<script src="../jquery/dist/jquery.min.js"></script>
+	<script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container text-center col-md-8 col-md-offset-2 " >
+		<h1>警告框方法的演示</h1>
+	<div class="alert alert-success" id="myAlert">
+		<a href="" class="close" data-dismiss="alert">&times;</a>
+		<strong>成功</strong>结果是成功的！
+	</div>
+	<div class="alert alert-warning">
+		<a href="" class="close" data-dismiss="alert">&times;</a>
+		<strong>警告</strong>你的网络连接有问题！
+	</div>
+	</div>
+	<script>
+		$(function(){
+			$("close").click(function(event) {
+				/* Act on the event */
+				$("myAlert").alert("close");
+			});
+		})
+	</script>
+</body>
+</html>

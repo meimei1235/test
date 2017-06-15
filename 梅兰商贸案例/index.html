@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>梅兰商贸首页</title>
+	<link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/1.css">
+	<script src="../jquery/dist/jquery.min.js"></script>
+	<script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+	<style>
+	  body {
+		min-width: 1100px;
+		font-size: 12px;
+	}
+	  h4 {
+	  	background-color: #ECF1F7;
+	  	padding: 5px 10px;
+	  	font-weight: bold;
+	
+	  }
+	  .nav {
+		padding: 0;
+		background-color: #fff;
+	  }
+	  .nav .nav-title {
+	  	background-color: #f7f7f7;
+	        padding: 5px 98px;
+	  }
+	  .nav .nav-title ul li {
+	  	margin: 0 5px;
+	  }
+	  #content-header ul li {
+	  	padding: 10px 25px;
+	  }
+	  #content-header ul li span {
+	    margin-right: 10px;
+	  }
+	  #myCarousel {
+	  	height: 288px;
+        width: 670px;
+        border: 1px solid #ddd;
+        margin: 0 15px;
+        background: black;
+	  }
+	  #myCarousel .carousel-indicators {
+	  	right: 234px;
+        margin-left: 0px;
+        width: 200px;
+        left: 234px;
+	  }
+	  #myCarousel .carousel-inner {
+	  	margin: 15px 100px;
+	  	width: 468px;
+	    height: 195px;
+	  }
+	  #myCarousel .carousel-control {
+	    top: 100px;
+	    bottom: 70px;
+	    height: 46px;
+	  }
+	  #content-header .pull-right {
+	  	padding-left: 5px;
+		padding-right: 5px;
+		height: 254px;
+		width: 242px;
+		border: 1px solid #ddd;
+		top: 15px;
+	  }
+	  #Building-Materials .content-box {
+	  	width: 850px;
+	        border: 1px solid #ddd;
+	        padding: 10px 0;
+	  }
+	   #Building-Materials .content {
+	   	width: 45%;
+	   	margin: 10px 0;
+	
+	   }
+	   #Building-Materials .pull-right {
+	   	border: 1px solid #ddd;
+        height: 276px;
+        line-height: 1.8;
+	   }
+	   #child-safe {
+	     height: 356px;
+	   }
+	   #child-safe .content-box {
+	   	 border: 1px solid #ddd;
+		 padding: 0px 0;
+		 height: 320px;
+		 width: 850px;
+	   }
+	   #child-safe .child-safe {
+	   	width: 210px;
+	   	margin-top: 5px;
+	
+	   }
+	   #child-safe .child-safe p {
+	   	width: 168px;
+	   	margin: 5px 25px;
+	   }
+	   #child-safe .child-safe span {
+	   	display: block;
+	   	margin: 5px 0;
+	   }
+	   #child-safe .pull-right {
+	   	width: 285px;
+        border: 1px solid #ddd;
+        height: 320px;
+	   }
+	   #art .content-box {
+	   	border: 1px solid #ddd;
+        padding: 0;
+        width: 850px;
+        height: 326px;
+	   }
+	   #art .content-box .art-item {
+	   	width: 50%;
+	   	margin: 20px 0;
+	   }
+	   #art .content-box .art-item .pull-left {
+	   	margin-right: 5px;
+	   }
+	   #art .content-box .art-item .pull-left button {
+	   	margin-top: 10px;
+        margin-left: 5px;
+	   }
+	   #art .content-box .art-item p {
+	   	 line-height: 1.6;
+	   }
+	   #art .content-box .art-item p strong {
+	   	 display: block;
+         margin-top: 10px;
+         border-bottom-width: 5px;
+         margin-bottom: 10px;
+	   }
+	   #art .pull-right {
+	   	 width: 285px;
+         border: 1px solid #ddd;
+	   }
+	   #art .pull-right h5 {
+		padding-left: 10px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 8px;
+	   }
+	   #art .pull-right .pull-right-pic {
+	   	padding-left: 5px;
+	    padding-right: 5px;
+	   }
+	   #art .pull-right .pull-right-pic img {
+	   	float: left;
+	    margin: 0 5px;
+	   }
+	   #art .pull-right .pull-right-pic p {
+	   	 padding: 10px;
+         margin-left: 0;
+         margin-top: 10px;
+	   }
+	   #art .pull-right ul {
+	   	line-height: 1.8;
+        padding-right: 40px;
+        padding-left: 50px;
+	   }
+	   #footer .content-box {
+	   	border-top: 1px solid #ddd;
+        border-bottom: 2px solid blue;
+        margin: 10px 0;
+        padding: 30px 50px;
+        text-align: center;
+	   }
+	</style> 
+</head>
+<body>
+  <div class="nav nav-justified" role="navigation" id="mynav">
+    <div class="nav-title">
+      	<span class="nav-title">您好，欢迎来到素材网</span>
+  	    <ul class="navbar-nav nav-list list-unstyled pull-right" >
+  	      <li><a href="#">网站导航</a><span class="caret"></span></li>
+  	      <li><a href="#">客服中心<span class="caret"></span></a></li>
+  	      <li><a href="#">建材服务<span class="caret"></span></a></li>
+  	      <li><a href="#">我的收藏<span class="caret"></span></a></li>
+  	      <li><a href="#">我的商务室<span class="caret"></span></a></li>
+  	      <li><a href="#">素材网首页<span class="caret"></span></a></li>
+  	    </ul>
+      </div>
+    <div class="container "> 
+  	  <div class="nav nav-tabs " style="padding: 10px 0">
+  	  	<img class="vertical-align" src="./images/1.png" alt="梅兰商贸图标">
+  	  	<form action="" class="form  pull-right" role="form" >
+  	  	  <div class="form-group"  style="border: 1px solid black; padding: 3px; margin: 15px 0;">
+		    <input type="text" class="form control " placeholder="请输入关键字" style="width: 300px; height: 36px;">
+		    <button type="button" class=" btn btn-primary "style="margin-left: -4px;"><label for="">搜索</label></button>
+		  </div>
+		</form>
+  	  </div>
+    </div>
+  </div>
+  <div class=" container content" >
+  	<ul class="nav nav-tabs border-bottom" id="content-nav" style="border-bottom: 2px solid black;">
+  		<li><a href="">首页</a></li>
+  		<li><a href="">建筑材料</a></li>
+  		<li><a href="">儿童安全座</a></li>
+  		<li><a href="">椅工类美术品</a></li>
+  	</ul>
+	<div class="content-box" id="content-header" style="margin: 8px 0;height: 288px;">
+	  <ul class="list-group list-unstyled col-md-2 " style="padding-right:0;margin-bottom: 0px;">
+		<li class="list-group-item active text-center" ><a href="" style="color: #fff">商机市场</a></li>
+		<li class="list-group-item "><span class="glyphicon glyphicon-wrench"></span><a href="">建筑材料</a></li>
+		<li class="list-group-item"><span class="glyphicon glyphicon-folder-open"></span><a href="">儿童安全座椅</a></li>
+		<li class="list-group-item"><span class="glyphicon glyphicon-file"></span><a href="">工艺美术品</a></li>
+		<li class="list-group-item"><span class="glyphicon glyphicon-lock"></span><a href="">建筑材料</a></li>
+		<li class="list-group-item"><span class="glyphicon glyphicon-folder-open"></span><a href="">儿童安全座椅</a></li>
+		<li class="list-group-item"><span class="glyphicon glyphicon-file"></span><a href="">工艺美术品</a></li>
+	  </ul>
+	  <div class="col-md-7 text-center carousel slide" data-interval="3000" id="myCarousel" >
+	    <ol class="carousel-indicators">
+	      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	      <li data-target="#myCarousel" data-slide-to="1" ></li>
+	      <li data-target="#myCarousel" data-slide-to="2" ></li>
+	    </ol>
+	    <div class="carousel-inner">
+	      <div class="item active">
+	      	<img src="./images/center.png" alt="first slide">
+	      </div>
+	      <div class="item">
+	      	<img src="./images/et01.png" alt="second slide">
+	      </div>
+	      <div class="item">
+	      	<img src="./images/et02.png" alt="third slide">
+	      </div>
+	    </div>
+	  	<a class="carousel-control left glyphicon glyphicon-chevron-left" href="#myCarousel" data-slide="prev"></a> 
+	  	<a class="carousel-control right glyphicon glyphicon-chevron-right" href="#myCarousel" data-slide="next"></a> 
+	  </div>
+	  <div class="col-md-3 pull-right">
+	  	<img src="./images/center-r.png" alt="" style="display: block; margin: 10px 4px 30px 4px ;text-align: center;">
+	  	<img src="./images/center-r2.png" alt="">
+	  </div>
+	</div>
+  </div>
+  <div class="container" id="Building-Materials">
+  	<h4>建筑材料</h4>
+  	  <div class="content-box col-md-10" >
+  	  	<div class="content col-md-5">
+  	      <div class="pull-left">
+  	      	<img src="./images/c1.png" alt="" style="margin-right: 8px;"><br>
+	   	    <button type="button" class="btn btn-primary pull-left " style="margin: 5px 0;">立即购买</button>
+  	      </div>
+	   	  <p class="">好太太晾衣架 铝钛合金 升降双杆 <span>自动换挡 安全耐用 稳定性好 抗氧化强 </span><br><strong>239.00 <small>￥386.00</small></strong></p> 限量99件 已售出 20件 
+  	  	</div>
+  	  	<div class="content col-md-5" >
+  	  	  <div class="pull-left">
+  	      	<img src="./images/c1.png" alt="" style="margin-right: 8px;"><br>
+	   	    <button type="button" class="btn btn-primary pull-left " style="margin: 5px 0;">立即购买</button>
+  	      </div>
+	   	  <p class="">好太太晾衣架 铝钛合金 升降双杆 <span>自动换挡 安全耐用 稳定性好 抗氧化强 </span><br><strong>239.00 <small>￥386.00</sm00</small></strong></p> 限量99件 已售出 20件 
+  	  	</div>
+  	  	
+  	  	<div class="content col-md-5">
+  	  	  <div class="pull-left">
+  	      	<img src="./images/c1.png" alt="" style="margin-right: 8px;"><br>
+	   	    <button type="button" class="btn btn-primary pull-left " style="margin: 5px 0;">立即购买</button>
+  	      </div>
+	   	  <p class="">好太太晾衣架 铝钛合金 升降双杆 <span>自动换挡 安全耐用 稳定性好 抗氧化强 </span><br><strong>239.00 <small>￥386.00</sm￥386.00</small></strong></p> 限量99件 已售出 20件 
+  	  	</div>
+  	  	<div class="content col-md-5">
+  	  	  <div class="pull-left">
+  	      	<img src="./images/c1.png" alt="" style="margin-right: 8px;"><br>
+	   	    <button type="button" class="btn btn-primary pull-left " style="margin: 5px 0;">立即购买</button>
+  	      </div>
+	   	  <p class="">好太太晾衣架 铝钛合金 升降双杆 <span>自动换挡 安全耐用 稳定性好 抗氧化强 </span><br><strong>239.00 <small>￥386.00</sm6.00</small></strong></p> 限量99件 已售出 20件 
+  	  	</div>
+  	  </div>
+	   	<div class="col-md-3 pull-right">
+	   	  <h5>建材资讯</h5>
+	   	   <ul class="nav-list ">
+	   	     <li><a href="">贵阳钢铁市场7月7日价格行情</a></li>
+   			 <li><a href="">贵阳钢铁市场7月7日价格行情</a></li>
+   			 <li><a href="">贵阳钢铁市场7月7日价格行情</a></li>
+   			 <li><a href="">贵阳钢铁市场7月7日价格行情</a></li>
+   			 <li><a href="">贵阳钢铁市场7月7日价格行情</a></li>
+   			 <li><a href="">贵阳钢铁市场7月7日价格行情</a></li>
+   			 <li><a href="">贵阳钢铁市场7月7日价格行情</a></li>
+   			 <li><a href="">贵阳钢铁市场7月7日价格行情</a></li>
+   			 <li><a href="">贵阳钢铁市场7月7日价格行情</a></li>
+   			 <li><a href="">贵阳钢铁市场7月7日价格行情</a></li>
+   			 <li><a href="">贵阳钢铁市场7月7日价格行情</a></li>
+	   	 </ul>
+	   </div>
+	 </div>
+	 <div class="container " id="child-safe" >
+	   <h4>儿童安全座椅</h4>
+	   <div class="content-box pull-left"  >
+	   	<div class="child-safe pull-left text-center">
+	   	  <img src=" ./images/et01.png" alt="">
+	   	  <p> 英国百代适-至尊者（带ISOFIX）奔驰宝马专用<span>适合年龄9个月-4岁</span>市场价：¥5580 <span><strong>直销价: ¥338</strong></span></p>
+	    </div>
+	    <div class="child-safe pull-left text-center">
+	     <img src=" ./images/et01.png" alt="">
+	   	  <p>英国百代适-至尊者（带ISOFIX）奔驰宝马专用<span>适合年龄9个月-4岁</span>市场价：¥5580 <span><strong>直销价: ¥338</strong></span></p>
+	    </div>
+	    <div class="child-safe pull-left text-center" >
+	   	 <img src=" ./images/et01.png" alt="">
+	   	 <p> 英国百代适-至尊者（带ISOFIX）奔驰宝马专用<span>适合年龄9个月-4岁</span>市场价：¥5580 <span><strong>直销价: ¥338</strong></span></p>
+	    </div>
+	    <div class="child-safe pull-left text-center">
+	   	 <img src=" ./images/et01.png" alt="">
+	   	 <p> 英国百代适-至尊者（带ISOFIX）奔驰宝马专用<span>适合年龄9个月-4岁</span>市场价：¥5580 <span><strong>直销价: ¥338</strong></span></p>
+	    </div>
+	   </div>
+	   <div class="pull-right" >
+	   	<img src="./images/et_right_bottom.png" alt="">
+	   	<img src="./images/et_right.png" alt="">
+	   </div>
+	   <ul>
+	   	<li><a href=""></a></li>
+	   </ul>
+	 </div>
+	 <div class="container" id="art">
+	   <h4>工艺艺术品</h4>
+	   <div class="content-box col-md-10 pull-left">
+	     <div class="art-item col-md-5 ">
+	       <div class="pull-left">
+	   	     <img src="./images/c1.png" alt=""><br>
+	   	     <button type="button " class="btn btn-primary pull-left">立即购买</button>
+	   	   </div>
+	   	   <p>好太太晾衣架 铝钛合金 升降双杆 <span>自动换挡 安全耐用 稳定性好 抗氧化强 </span><br><strong>239.00 <small>￥386.00</small></strong></p> 限量99件 已售出 20件 </p>
+	     </div>
+	   	 <div class="art-item col-md-5" >
+	       <div class="pull-left">
+	   	     <img src="./images/c1.png" alt=""><br>
+	   	     <button type="button " class="btn btn-primary pull-left">立即购买</button>
+	   	   </div>
+	   	   <p>好太太晾衣架 铝钛合金 升降双杆 <span>自动换挡 安全耐用 稳定性好 抗氧化强 </span><br><strong>239.00 <small>￥386.00</small></strong></p> 限量99件 已售出 20件 </p>
+	     </div>
+	     <div class="art-item col-md-5" >
+	       <div class="pull-left">
+	   	     <img src="./images/c1.png" alt=""><br>
+	   	     <button type="button " class="btn btn-primary pull-left">立即购买</button>
+	   	   </div>
+	   	   <p>好太太晾衣架 铝钛合金 升降双杆 <span>自动换挡 安全耐用 稳定性好 抗氧化强 </span><br><strong>239.00 <small>￥386.00</small></strong></p> 限量99件 已售出 20件 </p>
+	     </div>
+	     <div class="art-item col-md-5" >
+	       <div class="pull-left">
+	   	     <img src="./images/c1.png" alt=""><br>
+	   	     <button type="button " class="btn btn-primary pull-left">立即购买</button>
+	   	   </div>
+	   	   <p>好太太晾衣架 铝钛合金 升降双杆 <span>自动换挡 安全耐用 稳定性好 抗氧化强 </span><br><strong>239.00 <small>￥386.00</small></strong></p> 限量99件 已售出 20件 </p>
+	     </div>
+	   </div>
+	   <div class="pull-right">
+	   	<h5>建材资讯</h5>
+	   	<div class="pull-right-pic">
+	   	  <img src="./images/subtitle.png" alt=""><p>在装灯具时，如果装上分开关，可以省去很多烦恼，因为如果只有一个总开关 </p>
+	   	</div>
+	   	<ul class="">
+	   	  <li><a href="#">贵阳钢铁市场7月7日价格行情</a></li>
+	   	  <li><a href="#">贵阳钢铁市场7月7日价格行情</a></li>
+	   	  <li><a href="#">贵阳钢铁市场7月7日价格行情</a></li>
+	   	  <li><a href="#">贵阳钢铁市场7月7日价格行情</a></li>
+	   	  <li><a href="#">贵阳钢铁市场7月7日价格行情</a></li>
+	   	  <li><a href="#">贵阳钢铁市场7月7日价格行情</a></li>
+	   	  <li><a href="#">贵阳钢铁市场7月7日价格行情</a></li>
+	   	  <li><a href="#">贵阳钢铁市场7月7日价格行情</a></li>
+	   	  <li><a href="#">贵阳钢铁市场7月7日价格行情</a></li>
+	   	</ul>
+	   </div>
+	 </div>
+	 <div class="container footer" id="footer">
+	   <div class="content-box">
+	     <ul class="list-inline list-unstyled">
+	      <li><strong>友情链接:</strong></li>
+	      <li><a href="#">爱加盟网</a></li>
+	      <li><a href="#">爱加盟网</a></li>
+	      <li><a href="#">爱加盟网</a></li>
+	      <li><a href="#">爱加盟网</a></li>
+	      <li><a href="#">爱加盟网</a></li>
+	      <li><a href="#">爱加盟网</a></li>
+	      <li><a href="#">爱加盟网</a></li>
+	      <li><a href="#">爱加盟网</a></li>
+	      <li><a href="#">爱加盟网</a></li>
+	      <li><a href="#">爱加盟网</a></li>
+	      <li><a href="#">爱加盟网</a></li>
+	      <li><a href="#">爱加盟网</a></li>
+	      <li><a href="#">爱加盟网</a></li>
+	      <li><a href="#">爱加盟网</a></li>
+	     </ul>
+	   </div>
+	   <div class="text-center">
+	   	<p>关于我们建材通服务网站建设诚聘英才友情链接联系方式隐私声明版权声明帮助中心网站地图 </p>
+	   	<p>中国建网 版权所有 2000-20012 服务热线：0571-98899898 请与我们联系：server@163.com 建材网会员互动群：12312313213 </p>
+	   	<p>本网实名:中建网 中建网 浙B2-20006159 </p>
+	   </div>
+	 </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css">
+	<script src="../jquery/dist/jquery.min.js"></script>
+	<script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div  class="container" style="padding-left: 300px; padding-top: 10px;">
+		<button class="btn btn-primary popover-show" data-toggle="popover" data-container="body" data-content="左侧的 Popover 中的一些内容 —— show 方法" data-placement="left">左侧的popover</button>
+	</div>
+	<script>
+		$(function(){
+			$(".popover-show").popover("show");
+			
+		});
+		$(function(){
+			$(".popover-show").on("shown.bs popover",function(){
+				alert("显示警告信息");
+			});
+		});
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css">
+	<script src="../jquery/dist/jquery.min.js"></script>
+	<script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container" style="padding: 100px 150px 10px;">
+		<!-- <button type="button" class="btn btn-default" title="Popover title"         data-container="body" data-toggle="popover" data-placement="left"        data-content="左侧的 Popover 中的一些内容">
+			      左侧的 Popover
+			   </button> -->
+		 <button class="btn btn-default" title="popover title" data-toggle="popover" dada-placement="left" data-content="左侧的 Popover 中的一些内容" data-container="body"> 左侧的 Popover</button> 
+		<button class="btn btn-primary" title="popover title" data-toggle="popover" data-placement="top" data-content="顶部的popover的内容" data-container="body"> 顶部的 Popover</button>
+		<button  class="btn btn-success" title="popover title" data-toggle="popover" data-placement="right" data-content="右侧的popover的内容" data-container="body">右侧的popover </button>
+		<button  class="btn btn-warning" title="popover title" data-toggle="popover" data-placement="bottom" data-content="底部的popover的内容" data-container="body">底部的popover</button>
+	</div>
+	<script>
+		$(function(){
+			$("[data-toggle='popover']").popover();
+		});
+	</script>
+</body>
+</html>
